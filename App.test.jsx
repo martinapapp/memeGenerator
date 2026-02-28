@@ -33,4 +33,18 @@ describe("App", () => {
     // Assert
     expect(screen.getByText("Code without coffee")).toBeInTheDocument()
   })
+
+  test("gets a new meme image", async () => {
+    // Arrange
+    const user = userEvent.setup()
+    render(<App />)
+    const getMemeImageButton = screen.getByRole('button')
+
+    // Act
+    await user.click(getMemeImageButton)
+
+    // Assert
+    const images = screen.getAllByRole('img')
+    expect(images[1].src).toBe("https://i.imgflip.com/1c1uej.jpg")
+  })
 })
