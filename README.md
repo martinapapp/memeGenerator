@@ -5,6 +5,8 @@
 
 A fun React app that lets you generate memes by picking a random image from the Imgflip API and adding your own top and bottom text.
 
+For testing guide look for in `testREADME.md`.
+
 ## Index
 
 - [About](#about)
